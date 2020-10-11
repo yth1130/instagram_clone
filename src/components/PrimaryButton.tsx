@@ -9,6 +9,11 @@ interface PrimaryButtonProps {
 }
 
 export class PrimaryButton extends Component<PrimaryButtonProps> {
+    static defaultProps={
+        label:'',
+        bgColor: colors.primary,
+        textColor: colors.secondary,
+    };
     constructor(props:PrimaryButtonProps) {
         super(props);
     }

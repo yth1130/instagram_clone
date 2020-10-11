@@ -5,13 +5,17 @@ import { StyleSheet, Text, View } from 'react-native';
 import { SplashScreen } from './src/SplashScreen';
 import { InitialLaunchScreen } from './src/InitialLaunchScreen';
 import SignUpScreen1 from './src/SignUpScreen1';
+import SignUpScreen2 from './src/SignUpScreen2';
+import FeedScreen from './src/FeedScreen';
 
 export default function App() {
     return (
         <View style={styles.container}>
             {/* <StatusBar style="auto" /> */}
             {/* <InitialLaunchScreen /> */}
-            <SignUpScreen1 />
+            {/* <SignUpScreen1 /> */}
+            {/* <SignUpScreen2 /> */}
+            <FeedScreen />
         </View>
     );
 }
