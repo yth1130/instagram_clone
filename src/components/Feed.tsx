@@ -8,7 +8,7 @@ export default class Feed extends Component {
                 <View style={styles.headerWrapper}>
                     <Image style={styles.profileThumb} source={require('../../assets/favicon.png')} />
                     <Text>name</Text>
-                    <Image source={require('../../assets/favicon.png')} />
+                    <Image style={styles.icon} source={require('../../assets/favicon.png')} />
                 </View>
                 <View>
                     <Text>Image</Text>
@@ -32,5 +32,9 @@ const styles = StyleSheet.create({
         width:50,
         height:50,
         borderRadius:50,
+    },
+    icon: {
+        width: 50,
+        height: 50,
     },
 })

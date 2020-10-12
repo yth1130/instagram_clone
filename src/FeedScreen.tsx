@@ -3,28 +3,29 @@ import { Text, View, StyleSheet, ScrollView, Image } from 'react-native'
 import { globalStyles } from './GlobalStyles'
 import { colors } from './config/colors'
 import Feed from './components/Feed'
+import {AntDesign} from '@expo/vector-icons'
 
 export default class FeedScreen extends Component {
     render() {
         return (
             <View style={[styles.container, globalStyles.droidSafeArea]}>
                 <View style={styles.header}>
-                    <Image style={styles.icon} source={require('../assets/favicon.png') /* 카메라아이콘 */ }/>
-                    <Image style={styles.icon} source={require('../assets/favicon.png') /* 로고 */}/> 
+                    <AntDesign style={styles.icon} name={'camera'} size={40}/>
+                    <Text style={styles.logo}>Instagram</Text>
                     <View style={styles.headerRightWrapper}>
-                        <Image style={styles.icon} source={require('../assets/favicon.png') /* igtv? */}/> 
-                        <Image style={styles.icon} source={require('../assets/favicon.png') /* 메세지 */}/> 
+                        <AntDesign style={styles.icon} name={'iconfontdesktop'} size={40}/>
+                        <AntDesign style={styles.icon} name={'message1'} size={40}/>
                     </View>
                 </View>
                 <ScrollView style={styles.feedContainer}>
                     <Feed />
                 </ScrollView>
                 <View style={styles.footer}>
-                    <Image style={styles.icon} source={require('../assets/favicon.png') /* 홈 */ }/>
-                    <Image style={styles.icon} source={require('../assets/favicon.png') /* 검색 */}/> 
-                    <Image style={styles.icon} source={require('../assets/favicon.png') /* 플러스? */}/> 
-                    <Image style={styles.icon} source={require('../assets/favicon.png') /* 하트? */}/> 
-                    <Image style={styles.icon} source={require('../assets/favicon.png') /* 프로필 */}/> 
+                    <AntDesign style={styles.icon} name={'home'} size={40}/>
+                    <AntDesign style={styles.icon} name={'search1'} size={40}/>
+                    <AntDesign style={styles.icon} name={'plussquareo'} size={40}/>
+                    <AntDesign style={styles.icon} name={'heart'} size={40}/>
+                    <AntDesign style={styles.icon} name={'user'} size={40}/>
                 </View>
             </View>
         )
@@ -62,5 +63,10 @@ const styles = StyleSheet.create({
     icon: {
         width:40,
         height:40,
+    },
+    logo: {
+        fontSize:30,
+        // fontStyle: 'italic',
+        // fontFamily: 'Billabong', //package.json에 rnpm에 폴더 표기, react-native link 실행.
     },
 })
